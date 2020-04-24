@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>holder - Cloud bookmark</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -28,17 +28,20 @@
 
 </head>
 <body>
-
+  <div class="container">
+      <div class="one-half column" style="margin-top: 5%">
+        <a href="#"><h4>Holdr</h4></a>
+    </div>
+  </div>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-     <ul>
-  <li><a href="new.php"><strong>New bookmark</strong></a></li>
-  <li><a href="view.php"><strong>See my bookmarks</strong></a></li>
-</ul>
-
+      <div class="one-half column" style="margin-top: 15%">
+        <ul>
+          <a class="button" href="new.php">Create new</a>
+          <a class="button" href="view.php">View bookmarks</a>
+        </ul>
       </div>
     </div>
   </div>

@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>Holdr - view bookmarks</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -98,23 +98,26 @@ if (isset($_POST['submit'])) {
 
 </head>
 <body>
-
+    <div class="container">
+      <div class="one-half column" style="margin-top: 5%">
+        <a href="#"><h4>Holdr</h4></a>
+    </div>
+  </div>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
       <div class="one-half column" style="margin-top: 25%">
-<a href="index.php">Back to home</a>
+        <a href="index.php">Back to home</a>
  
-<h2>Find user based on pin</h2>
+          <h2>Find bookmarks with pin</h2>
 
-<form method="post">
-  <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
-  <label for="pin">pin</label>
-  <input type="text" id="pin" name="pin">
-  <input type="submit" name="submit" value="View Results">
-</form>
-
+              <form method="post">
+                <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
+                <label for="pin">PIN</label>
+                <input type="text" id="pin" name="pin">
+                <input type="submit" name="submit" value="View Results">
+              </form>
       </div>
     </div>
   </div>
