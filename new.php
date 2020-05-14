@@ -37,13 +37,6 @@ if (isset($_POST['submit'])) {
 ?>
 
 
-  <?php if (isset($_POST['submit']) && $statement) : ?>
-    <blockquote><?php echo escape($_POST['name']); ?> successfully added.</blockquote>
-  <?php endif; ?>
-  
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,17 +78,21 @@ if (isset($_POST['submit'])) {
   <div class="container">
     <div class="row">
       <div class="one-half column" style="margin-top: 10%">
+
+  <?php if (isset($_POST['submit']) && $statement) : ?>
+    <blockquote><?php echo escape($_POST['name']); ?> successfully added.</blockquote>
+  <?php endif; ?>
 <a href="index.php">Back to home</a>
   <h2>Create new item</h2>
 
   <form method="post">
     <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
     <label for="name">Name</label>
-    <input type="text" name="name" id="name">
+    <input type="text" name="name" id="name" required>
     <label for="url">URL</label>
-    <input type="text" name="url" id="url" style="width: 400px">
+    <input type="text" name="url" id="url" style="width: 400px" required>
     <label for="pin">PIN</label>
-    <input type="password" name="pin" id="pin">
+    <input type="password" name="pin" id="pin" >
     <input type="submit" name="submit" value="Submit">
   </form>
 
