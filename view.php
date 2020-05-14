@@ -2,7 +2,7 @@
 
 /**
  * Function to query information based on 
- * a parameter: in this case, location.
+ * a parameter: in this case, PIN
  *
  */
 
@@ -30,41 +30,6 @@ if (isset($_POST['submit'])) {
   }
 }
 ?>
-
-        
-<?php  
-if (isset($_POST['submit'])) {
-  if ($result && $statement->rowCount() > 0) { ?>
-    <h2>Results</h2>
-
-    <table class="u-full-width">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>URL</th>
-          <th>PIN</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-      <?php foreach ($result as $row) : ?>
-        <tr>
-          <td><?php echo escape($row["id"]); ?></td>
-          <td><?php echo escape($row["name"]); ?></td>
-          <td><?php echo escape($row["url"]); ?></td>
-          <td><?php echo escape($row["pin"]); ?></td>
-          <td><?php echo escape($row["date"]); ?> </td>
-        </tr>
-      <?php endforeach; ?>
-      </tbody>
-    </table>
-    <?php } else { ?>
-      <blockquote>No results found for <?php echo escape($_POST['pin']); ?>.</blockquote>
-    <?php } 
-} ?> 
-
-
 
 
   
@@ -100,14 +65,14 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="container">
       <div class="one-half column" style="margin-top: 5%">
-        <a href="#"><h4>Holdr</h4></a>
+        <a href="index.php"><h4>Holdr</h4></a>
     </div>
   </div>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
+      <div class="one-half column" style="margin-top: 10%">
         <a href="index.php">Back to home</a>
  
           <h2>Find bookmarks with pin</h2>
@@ -126,3 +91,42 @@ if (isset($_POST['submit'])) {
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
+        
+<?php  
+if (isset($_POST['submit'])) {
+  if ($result && $statement->rowCount() > 0) { ?>
+    
+  <div class="container">
+    <h2>Results</h2>
+    <div class="row">
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>URL</th>
+          <th>PIN</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php foreach ($result as $row) : ?>
+        <tr>
+          <td><?php echo escape($row["id"]); ?></td>
+          <td><?php echo escape($row["name"]); ?></td>
+          <td><?php echo "<a href='".$row["url"]."'>".$row["url"]."</a>"; ?></td>
+          <!-- <td><?php echo escape($row["url"]); ?></td> -->
+          <td><?php echo escape($row["pin"]); ?></td>
+          <td><?php echo escape($row["date"]); ?> </td>
+        </tr>
+      <?php endforeach; ?>
+      </tbody>
+    </table>
+  </div>
+</div>
+    <?php } else { ?>
+      <blockquote>No results found for <?php echo escape($_POST['pin']); ?>.</blockquote>
+    <?php } 
+} ?> 
+
+

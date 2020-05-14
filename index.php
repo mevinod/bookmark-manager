@@ -28,18 +28,18 @@
 
 </head>
 <body>
-  <div class="container">
+  <div class="container" style="margin-left: 41%">
       <div class="one-half column" style="margin-top: 5%">
         <a href="#"><h4>Holdr</h4></a>
     </div>
   </div>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
+  <div class="container" style="margin-left: 35%">
     <div class="row">
       <div class="one-half column" style="margin-top: 15%">
         <ul>
-          <a class="button" href="new.php">Create new</a>
+          <a class="button" href="new.php">Create new</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           <a class="button" href="view.php">View bookmarks</a>
         </ul>
       </div>

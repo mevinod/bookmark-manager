@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>Holdr - view bookmarks</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -74,12 +74,17 @@ if (isset($_POST['submit'])) {
 
 </head>
 <body>
+    <div class="container">
+      <div class="one-half column" style="margin-top: 5%">
+        <a href="index.php"><h4>Holdr</h4></a>
+    </div>
+  </div>
     
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
+      <div class="one-half column" style="margin-top: 10%">
 <a href="index.php">Back to home</a>
   <h2>Create new item</h2>
 
@@ -88,9 +93,9 @@ if (isset($_POST['submit'])) {
     <label for="name">Name</label>
     <input type="text" name="name" id="name">
     <label for="url">URL</label>
-    <input type="text" name="url" id="url">
+    <input type="text" name="url" id="url" style="width: 400px">
     <label for="pin">PIN</label>
-    <input type="text" name="pin" id="pin">
+    <input type="password" name="pin" id="pin">
     <input type="submit" name="submit" value="Submit">
   </form>
 
